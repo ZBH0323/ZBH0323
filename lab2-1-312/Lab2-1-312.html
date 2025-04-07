@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .page-header {
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: #f5f5f5;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .form-group:last-child {
+            border-bottom: none;
+        }
+        
+        .form-item {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+        
+        .form-item label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        
+        .form-item input, .form-item select, .form-item textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .form-item textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .photo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        .photo-preview {
+            width: 120px;
+            height: 150px;
+            border: 1px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        .photo-preview img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .upload-btn {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #4a90e2;
+            font-size: 14px;
+        }
+        
+        .upload-btn:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h1>个人简历</h1>
+        </header>
+        
+        <!-- 基本信息 -->
+        <div class="section">
+            <div class="section-header">基本信息</div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" value="赵宝华">
+                </div>
+                <div class="form-item">
+                    <label for="gender">性别</label>
+                    <select id="gender">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="age">年龄</label>
+                    <input type="text" id="age" value="18">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="hometown">籍贯</label>
+                    <input type="text" id="hometown" value="山东省">
+                </div>
+                <div class="form-item">
+                    <label for="phone">联系电话</label>
+                    <input type="text" id="phone" value="138-1234-5678">
+                </div>
+                <div class="form-item">
+                    <label for="email">电子邮箱</label>
+                    <input type="text" id="email" value="10086@example.com">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="education">学历</label>
+                    <select id="education">
+                        <option value="本科">本科</option>
+                        <option value="专科">专科</option>
+                        <option value="硕士">硕士</option>
+                        <option value="博士">博士</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="health">健康状况</label>
+                    <input type="text" id="health" value="良好">
+                </div>
+                <div class="form-item">
+                    <label for="marital">婚姻状况</label>
+                    <select id="marital">
+                        <option value="未婚">未婚</option>
+                        <option value="已婚">已婚</option>
+                        <option value="离异">离异</option>
+                        <option value="丧偶">丧偶</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="photo">照片</label>
+                    <div class="photo-container">
+                        <div class="photo-preview">
+                            <img src="zbh.jpg" alt="个人照片" style="max-width: 100%; max-height: 100%;">
+                        </div>
+                        <button class="upload-btn">上传照片</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 求职意向 -->
+        <div class="section">
+            <div class="section-header">求职意向</div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="job-intent">求职意向</label>
+                    <input type="text" id="job-intent" value="前端开发工程师">
+                </div>
+                <div class="form-item">
+                    <label for="major">专业</label>
+                    <input type="text" id="major" value="软件工程">
+                </div>
+                <div class="form-item">
+                    <label for="university">毕业院校</label>
+                    <input type="text" id="university" value="鲁东大学">
+                </div>
+            </div>
+        </div>
+        
+        <!-- 技能证书 -->
+        <div class="section">
+            <div class="section-header">技能证书</div>
+            <div class="form-group">
+                <div class="form-item">
+                    <textarea placeholder="请在此填写您的技能证书">熟练掌握HTML5、CSS3、JavaScript（ES6+）
+熟悉前端框架：React、Vue.js
+掌握后端基础：Node.js、Express
+熟悉版本控制工具：Git
+获得证书：计算机二级证书、前端开发工程师认证</textarea>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 个人特长与爱好 -->
+        <div class="section">
+            <div class="section-header">个人特长与爱好</div>
+            <div class="form-group">
+                <div class="form-item">
+                    <textarea placeholder="请在此填写您的特长与爱好">编程：热爱前端开发，喜欢尝试新技术
+阅读：喜欢阅读技术书籍和博客，不断学习新知识
+运动：热爱篮球和跑步，保持良好的身体状态
+旅行：喜欢探索新的地方，了解不同文化</textarea>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 自我评价 -->
+        <div class="section">
+            <div class="section-header">自我评价</div>
+            <div class="form-group">
+                <div class="form-item">
+                    <textarea placeholder="请在此填写您的自我评价">我是一名热爱技术的前端开发工程师，拥有5年的开发经验。在工作中，我始终保持积极主动的态度，注重团队协作和代码质量。我熟练掌握多种前端技术和框架，能够独立完成复杂项目的前端开发工作。
+
+在过去的项目中，我成功带领团队完成了多个大型项目的前端开发工作，优化了系统性能，提升了用户体验。我注重代码的可维护性和可扩展性，遵循最佳实践和设计模式。同时，我也积极参与团队的技术分享和代码审查，帮助团队成员共同成长。
+
+除了技术能力，我还具备良好的沟通能力和团队协作精神。在面对复杂问题时，我能够冷静分析，提出解决方案，并高效执行。我相信，作为一名技术人，持续学习和创新是保持竞争力的关键。我期待能够在贵公司继续发挥我的技术优势，为团队和公司创造更多价值。</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('个人简历表单已加载完成');
+            
+            // 照片上传功能
+            const uploadBtn = document.querySelector('.upload-btn');
+            const photoPreview = document.querySelector('.photo-preview');
+            
+            uploadBtn.addEventListener('click', function() {
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.accept = 'image/*';
+                
+                input.onchange = function(e) {
+                    const file = e.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function(event) {
+                            const img = document.createElement('img');
+                            img.src = event.target.result;
+                            photoPreview.innerHTML = '';
+                            photoPreview.appendChild(img);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                };
+                
+                input.click();
+            });
+        });
+    </script>
+</body>
+</html>
